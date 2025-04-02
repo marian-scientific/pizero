@@ -1,15 +1,15 @@
 from gpiozero import MCP3008
-import gpiozero.pins.lgpio
+#import gpiozero.pins.lgpio
 from datetime import datetime
 from time import sleep
-import RPi.GPIO
+#mport RPi.GPIO
 
 
 
 
-RPi.GPIO.setmode(RPi.GPIO.BCM)
-pin=26
-RPi.GPIO.setup(pin,RPi.GPIO.IN,pull_up_down=RPi.GPIO.PUD_UP)
+#RPi.GPIO.setmode(RPi.GPIO.BCM)
+#pin=26
+#RPi.GPIO.setup(pin,RPi.GPIO.IN,pull_up_down=RPi.GPIO.PUD_UP)
 
 print("Timestamp, Sensor0, Transistor0");
 while True:
