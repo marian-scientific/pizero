@@ -3,14 +3,14 @@
 //;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 .arch armv8-a
-.equ LOAD_ADDRESS, 0x0
+.equ LOAD_ADDRESS, 0x8000
 .equ CODE_SIZE, END-START // everything beyond the HEADER is code
 
 //;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 //;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;HEADER;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 //;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-.org LOAD_ADDRESS
+//.org LOAD_ADDRESS
 ELF_HEADER:
 	.byte 0x7F,'E','L','F' // magic number to indicate ELF file
 	.byte 0x02 // 0x1 for 32-bit, 0x2 for 64-bit
