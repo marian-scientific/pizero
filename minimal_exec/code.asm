@@ -34,7 +34,7 @@ ELF_HEADER:
 	.short 0x0000 // index in section header table for section names (waste)
 PROGRAM_HEADER:
 	.word 0x00000001 // 0x1 for loadable program segment
-	.word 0x00000005 // read/write/execute flags
+	.word 0x00000007 // read/write/execute flags
 	.quad 0x0000000000000078 // offset of code start in file image (0x40+0x38)
 	.quad LOAD_ADDRESS+0x78 // virtual address of segment in memory
 	.quad 0x0000000000000000 // physical address of segment in memory (ignored?)
