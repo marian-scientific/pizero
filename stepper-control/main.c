@@ -8,7 +8,7 @@
 #define Bpin 20
 #define Cpin 21
 #define Dpin 22
-#define del 100000
+#define del 2000000
 
 int main(int argc, char const *argv[]) {
 
@@ -24,22 +24,39 @@ int main(int argc, char const *argv[]) {
 	bcm2835_gpio_write(Dpin,0);
 	
 	while (1){
-		usleep(del);
+		//usleep(del);
+		printf("A on only\n");
+		getchar();
 		bcm2835_gpio_write(Bpin,1);
-		usleep(del);
+		//usleep(del);
+		printf("A + B on\n");
+		getchar();
 		bcm2835_gpio_write(Apin,0);
-		usleep(del);
+		//usleep(del);
+		printf("B on only\n");
+		getchar();
 		bcm2835_gpio_write(Cpin,1);
-		usleep(del);
+		//usleep(del);
+		printf("B + C on\n");
+		getchar();
 		bcm2835_gpio_write(Bpin,0);
-		usleep(del);
+		//usleep(del);
+		printf("C on only\n");
+		getchar();
 		bcm2835_gpio_write(Dpin,1);
-		usleep(del);
+		//usleep(del);
+		printf("C + D on\n");
+		getchar();
 		bcm2835_gpio_write(Cpin,0);
-		usleep(del);
+		//usleep(del);
+		printf("D on only\n");
+		getchar();
 		bcm2835_gpio_write(Apin,1);
-		usleep(del);
+		printf("D + A on\n");
+		getchar();
+		//usleep(del);
 		bcm2835_gpio_write(Dpin,0);
+		
 	}
 
 	return 0;
